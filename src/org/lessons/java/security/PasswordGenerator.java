@@ -23,5 +23,6 @@ public class PasswordGenerator {
         int totale = giornoNascita + meseNascita + annoNascita;
 
         System.out.println("La tua password è " + nome + "-" + cognome + "-" + colorePreferito + "-" + totale);
+        scanner.close();
     }
 }
