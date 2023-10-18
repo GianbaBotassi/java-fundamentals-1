@@ -1,6 +1,9 @@
 package org.lessons.java.security;
 
+import java.util.Arrays;
 import java.util.Scanner;
+
+import static java.lang.Integer.parseInt;
 
 public class PasswordGenerator {
     public static void main(String[] args) {
@@ -13,16 +16,18 @@ public class PasswordGenerator {
         String cognome = scanner.nextLine();
         System.out.println("Inserisci il tuo colore preferito");
         String colorePreferito = scanner.nextLine();
-        System.out.println("Inserisci il giorno in cui sei nato");
-        int giornoNascita = scanner.nextInt();
-        System.out.println("Inserisci il mese in cui sei nato");
-        int meseNascita = scanner.nextInt();
-        System.out.println("Inserisci l'anno in cui sei nato");
-        int annoNascita = scanner.nextInt();
+        System.out.println("Inserisci la data di nascita");
+        String dataDiNascita = scanner.nextLine();
 
-        int totale = giornoNascita + meseNascita + annoNascita;
+        String[] arrayNascita = dataDiNascita.split("[/-]");
 
-        System.out.println("La tua password è " + nome + "-" + cognome + "-" + colorePreferito + "-" + totale);
+        int totaleDataDiNascita = 0;
+
+        for (String num : arrayNascita) {
+        totaleDataDiNascita += parseInt(num);
+        }
+
+        System.out.println("La tua password è " + nome + "-" + cognome + "-" + colorePreferito + "-" + totaleDataDiNascita);
         scanner.close();
     }
 }
