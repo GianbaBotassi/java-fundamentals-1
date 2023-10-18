@@ -32,5 +32,8 @@ public class Ferragnez {
         }
 
         System.out.println(inList ? "Entra pure!" : "Non sei invitato!");
+
+        scanner.close();
     }
+
 }
