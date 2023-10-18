@@ -23,7 +23,7 @@ public class TicketTrain {
             total = total * (100 - over65) / 100;
         }
 
-        System.out.println("La somma che devi pagare è pari a " + total + "€.");
+        System.out.printf("La somma che devi pagare è pari a %.2f€",total);
 
         scanner.close();
     }

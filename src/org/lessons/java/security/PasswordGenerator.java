@@ -1,6 +1,5 @@
 package org.lessons.java.security;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -27,7 +26,7 @@ public class PasswordGenerator {
         totaleDataDiNascita += parseInt(num);
         }
 
-        System.out.println("La tua password è " + nome + "-" + cognome + "-" + colorePreferito + "-" + totaleDataDiNascita);
+        System.out.printf("La tua password è %s-%s-%s-%s",nome,cognome,colorePreferito,totaleDataDiNascita);
         scanner.close();
     }
 }
